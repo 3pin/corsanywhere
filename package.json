@@ -1,0 +1,26 @@
+{
+  "name": "corsanywhere",
+  "version": "1.0.0",
+  "description": "proxy frontend reqs via backend server",
+  "main": "app.js",
+  "dependencies": {
+    "cors-anywhere": "^0.4.3",
+    "dotenv": "^8.2.0",
+    "s": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3pin/corsanywhere.git"
+  },
+  "author": "Leon McCarthy",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/3pin/corsanywhere/issues"
+  },
+  "homepage": "https://github.com/3pin/corsanywhere#readme"
+}

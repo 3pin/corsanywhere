@@ -14,7 +14,8 @@ if (process.env.BLACKLIST) {
   options.originBlacklist = process.env.BLACKLIST.split(',');
 }
 if (process.env.REQUIRE_HEADERS === 'true') {
-  options.requireHeader = ['origin', 'x-requested-with'];
+  options.requireHeader = ['Origin'];
+  // options.requireHeader = ['origin', 'x-requested-with'];
 }
 if (process.env.REMOVE_HEADERS === 'true') {
   options.removeHeader = ['cookie', 'cookie2'];

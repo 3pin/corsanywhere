@@ -28,12 +28,6 @@ if (process.env.SAME_ORIGIN === 'true') {
 }
 console.log(options);
 
-if (process.env.HTTPS === 'true') {
-  cors_proxy_https.createServer(options).listen(port, host, function () {
-    console.log('Running CORS Anywhere on ' + host + ':' + port);
-  });
-} else {
-  cors_proxy.createServer(options).listen(port, host, function () {
-    console.log('Running CORS Anywhere on ' + host + ':' + port);
-  });
-}
+cors_proxy.createServer(options).listen(port, host, function () {
+  console.log('Running CORS Anywhere on ' + host + ':' + port);
+});

@@ -6,7 +6,6 @@
   "dependencies": {
     "cors-anywhere": "^0.4.3",
     "dotenv": "^8.2.0",
-    "http-to-https-cors-anywhere": "0.0.1",
     "s": "^1.0.0"
   },
   "devDependencies": {},

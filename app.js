@@ -16,12 +16,12 @@ if (process.env.WHITELIST) {
 if (process.env.BLACKLIST) {
   options.originBlacklist = process.env.BLACKLIST.split(',');
 }
-if (process.env.REQUIRE_HEADERS === 'true') {
-  options.requireHeader = ['Origin'];
+if (process.env.REQUIRE_HEADERS) {
+  options.requireHeader = process.env.REQUIRE_HEADERS.split(',');
   // options.requireHeader = ['origin', 'x-requested-with'];
 }
-if (process.env.REMOVE_HEADERS === 'true') {
-  options.removeHeader = ['cookie', 'cookie2'];
+if (process.env.REMOVE_HEADERS) {
+  options.removeHeader = process.env.REMOVE_HEADERS.split(',');
 }
 if (process.env.SAME_ORIGIN === 'true') {
   options.redirectSameOrigin = true;

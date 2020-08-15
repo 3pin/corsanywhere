@@ -2,7 +2,6 @@
 require('dotenv').config();
 
 const cors_proxy = require('cors-anywhere');
-const cors_proxy_https = require('http-to-https-cors-anywhere');
 
 // Listen on a specific host via the HOST environment variable
 var host = process.env.HOST || '0.0.0.0';

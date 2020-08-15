@@ -1,8 +1,11 @@
 /* load the ENVIRONMENT variables for debug */
 require('dotenv').config();
 
+const cors_proxy = require('cors-anywhere');
+const cors_proxy_https = require('http-to-https-cors-anywhere');
+
 // Listen on a specific host via the HOST environment variable
-var host = process.env.HOST || 'localhost';
+var host = process.env.HOST || '0.0.0.0' : '127.0.0.1';
 // Listen on a specific port via the PORT environment variable
 var port = process.env.PORT || 8080;
 
@@ -25,7 +28,12 @@ if (process.env.SAME_ORIGIN === 'true') {
 }
 console.log(options);
 
-var cors_proxy = require('cors-anywhere');
-cors_proxy.createServer(options).listen(port, host, function () {
-  console.log('Running CORS Anywhere on ' + host + ':' + port);
-});
+if (process.env.HTTPS === 'true') {
+  cors_proxy_https.createServer(options).listen(port, host, function () {
+    console.log('Running CORS Anywhere on ' + host + ':' + port);
+  });
+} else {
+  cors_proxy.createServer(options).listen(port, host, function () {
+    console.log('Running CORS Anywhere on ' + host + ':' + port);
+  });
+}

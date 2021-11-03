@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "proxy frontend reqs via backend server",
   "main": "app.js",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
   "dependencies": {
-    "cors-anywhere": "^0.4.3",
-    "dotenv": "^8.2.0",
+    "cors-anywhere": "^0.4.4",
+    "dotenv": "^8.6.0",
     "s": "^1.0.0"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",

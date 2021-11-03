@@ -9,6 +9,8 @@ var host = process.env.HOST || '0.0.0.0';
 var port = process.env.PORT || 8080;
 
 const options = {}
+
+//options.handleInitialRequest();
 if (process.env.WHITELIST) {
   options.originWhitelist = process.env.WHITELIST.split(',');
 }
@@ -29,4 +31,4 @@ console.log(options);
 
 cors_proxy.createServer(options).listen(port, host, function () {
   console.log('Running CORS Anywhere on ' + host + ':' + port);
-});
+})

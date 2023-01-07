@@ -1,8 +1,79 @@
 {
   "name": "corsanywhere",
   "version": "1.0.0",
-  "lockfileVersion": 1,
+  "lockfileVersion": 2,
   "requires": true,
+  "packages": {
+    "": {
+      "name": "corsanywhere",
+      "version": "1.0.0",
+      "license": "GPL-3.0",
+      "dependencies": {
+        "cors-anywhere": "^0.4.4",
+        "dotenv": "^8.6.0",
+        "s": "^1.0.0"
+      },
+      "engines": {
+        "node": "10.x",
+        "npm": "6.x"
+      }
+    },
+    "node_modules/cors-anywhere": {
+      "version": "0.4.4",
+      "resolved": "https://registry.npmjs.org/cors-anywhere/-/cors-anywhere-0.4.4.tgz",
+      "integrity": "sha512-8OBFwnzMgR4mNrAeAyOLB2EruS2z7u02of2bOu7i9kKYlZG+niS7CTHLPgEXKWW2NAOJWRry9RRCaL9lJRjNqg==",
+      "dependencies": {
+        "http-proxy": "1.11.1",
+        "proxy-from-env": "0.0.1"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "node_modules/dotenv": {
+      "version": "8.6.0",
+      "resolved": "https://registry.npmjs.org/dotenv/-/dotenv-8.6.0.tgz",
+      "integrity": "sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==",
+      "engines": {
+        "node": ">=10"
+      }
+    },
+    "node_modules/eventemitter3": {
+      "version": "1.2.0",
+      "resolved": "https://registry.npmjs.org/eventemitter3/-/eventemitter3-1.2.0.tgz",
+      "integrity": "sha1-HIaZHYFq0eUEdQ5zh0Ik7PO+xQg="
+    },
+    "node_modules/http-proxy": {
+      "version": "1.11.1",
+      "resolved": "https://registry.npmjs.org/http-proxy/-/http-proxy-1.11.1.tgz",
+      "integrity": "sha512-qz7jZarkVG3G6GMq+4VRJPSN4NkIjL4VMTNhKGd8jc25BumeJjWWvnY3A7OkCGa8W1TTxbaK3dcE0ijFalITVA==",
+      "dependencies": {
+        "eventemitter3": "1.x.x",
+        "requires-port": "0.x.x"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "node_modules/proxy-from-env": {
+      "version": "0.0.1",
+      "resolved": "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-0.0.1.tgz",
+      "integrity": "sha1-snxJRunm1dutt1mKZDXTAUxM/Uk="
+    },
+    "node_modules/requires-port": {
+      "version": "0.0.1",
+      "resolved": "https://registry.npmjs.org/requires-port/-/requires-port-0.0.1.tgz",
+      "integrity": "sha1-S0QUQR2d98hVmV3YmajHiilRwW0="
+    },
+    "node_modules/s": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/s/-/s-1.0.0.tgz",
+      "integrity": "sha512-Tz63UXhdEBvvIV6Q0a+AV2Dx1TPq+vVWNYBxyCT9TG0uqn9kySwFTjfq3C1YuGBRwYtt9Tof11L6GCKi88foqw==",
+      "engines": {
+        "node": ">=0.8"
+      }
+    }
+  },
   "dependencies": {
     "cors-anywhere": {
       "version": "0.4.4",
@@ -26,7 +97,7 @@
     "http-proxy": {
       "version": "1.11.1",
       "resolved": "https://registry.npmjs.org/http-proxy/-/http-proxy-1.11.1.tgz",
-      "integrity": "sha1-cd9VdX6ALVjqgQ3yJEAZ3aBa6F0=",
+      "integrity": "sha512-qz7jZarkVG3G6GMq+4VRJPSN4NkIjL4VMTNhKGd8jc25BumeJjWWvnY3A7OkCGa8W1TTxbaK3dcE0ijFalITVA==",
       "requires": {
         "eventemitter3": "1.x.x",
         "requires-port": "0.x.x"
